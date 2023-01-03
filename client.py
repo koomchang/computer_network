@@ -36,7 +36,6 @@ while True:
         request_message = f'NotAllowed / {HTTP_VERSION}\r\nHost: {serverName}:{serverPort}\r\nUser-Agent: {USER_AGENT}\r\nAccept: */*\r\n\r\n'
 
     # 서버로 request_message 를 보낸다.
-    print(request_message)
     clientSocket.send(request_message.encode('utf-8'))
 
     # 클라이언트 소켓으로부터 최대 1024 bytes 만큼의 데이터를 읽어 온다.
